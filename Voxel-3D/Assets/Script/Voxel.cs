@@ -266,17 +266,20 @@ public class Voxel : MonoBehaviour
 		if (axis == Axis.XAxis)
 		{
 			Int32 x = Mathf.FloorToInt(voxelPos.x / _voxelSize.x);
-			value = Mathf.Clamp(x, 0, XDensity - 1);
+			// value = Mathf.Clamp(x, 0, XDensity - 1);
+			value = x;
 		}
 		else if (axis == Axis.YAxis)
 		{
 			Int32 y = Mathf.FloorToInt(voxelPos.y / _voxelSize.y);
-			value = Mathf.Clamp(y, 0, YDensity - 1);
+			// value = Mathf.Clamp(y, 0, YDensity - 1);
+			value = y;
 		}
 		else
 		{
 			Int32 z = Mathf.FloorToInt(voxelPos.z / _voxelSize.z);
-			value = Mathf.Clamp(z, 0, ZDensity - 1);
+			// value = Mathf.Clamp(z, 0, ZDensity - 1);
+			value = z;
 		}
 		//
 		return value;
